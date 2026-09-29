@@ -1,0 +1,68 @@
+{
+  "repo": "picokit-12-dht11-read",
+  "eyebrow": "PICOKIT // LESSON 12",
+  "title": "PICOKIT // DHT11 READ",
+  "subtitle": "TEMPERATURE AND HUMIDITY + AUTHENTICATED HEARTBEAT",
+  "accent": "#4756FF",
+  "dim": "#2C359E",
+  "white": "#DADEFF",
+  "cyan": "#7FD8E0",
+  "bg": "#040611",
+  "bg_edge": "#010105",
+  "icon": "thermo",
+  "panel_status": "T 23.0 C  ·  H 61.0 %  ·  AEAD :ON",
+  "chips": [
+    {
+      "label": "SENSOR",
+      "value": "GP4"
+    },
+    {
+      "label": "TEMP",
+      "value": "23.0 C"
+    },
+    {
+      "label": "KEY",
+      "value": "argon2id"
+    },
+    {
+      "label": "RADIO",
+      "value": "-34 dBm"
+    }
+  ],
+  "terminal": [
+    "$ gateway listen /dev/cu.usbserial-A50285BI",
+    "[*] node 00012  seq 18  HEARTBEAT  AEAD ok",
+    "[*] anti-replay window ok  counter 18",
+    "[+] dht t=230 h=610  onboard blink",
+    "[+] ack sent  rssi -34  snr 9.0"
+  ],
+  "categories": [
+    "DHT11",
+    "TWOWIRE",
+    "SECURE",
+    "LINK"
+  ],
+  "cards": [
+    {
+      "tag": "LINE-01",
+      "label": "temperature",
+      "value": "tenths"
+    },
+    {
+      "tag": "LINE-02",
+      "label": "humidity",
+      "value": "tenths"
+    },
+    {
+      "tag": "BUS-01",
+      "label": "one-wire",
+      "value": "GP4"
+    }
+  ],
+  "footer": [
+    "1 NODE  ·  1 GATEWAY  ·  2 WAY LORA  ·  NO PLAINTEXT",
+    "PICOKIT SERIES  ·  OUTPUT  ·  INPUT  ·  RADIO  ==[ DHT11 ]=="
+  ],
+  "layout": "split",
+  "stat": "GP4"
+}
